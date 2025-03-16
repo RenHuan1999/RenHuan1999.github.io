@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>SpherePose</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">Learning Shape-Independent Transformation via Spherical Representations for Category-Level Object Pose Estimation</h1>
+
+          <div class="is-size-4 publication-authors">
+            <span class="author-block">ICLR 2025</span>
+          </div>
+          <hr>
+
+          <div class="is-size-5 publication-authors">
+            <!-- Paper authors -->
+            <span class="author-block">
+              <a href="https://github.com/RenHuan1999" target="_blank">Huan Ren</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://openreview.net/profile?id=~Wenfei_Yang2" target="_blank">Wenfei Yang</a><sup>1,2,3</sup>,</span>
+            <span class="author-block">
+              <a href="https://openreview.net/profile?id=~Xiang_Liu8" target="_blank">Xiang Liu</a><sup>4</sup>,</span>
+            <span class="author-block">
+              <a href="http://www.cbsr.ia.ac.cn/users/sfzhang/" target="_blank">Shifeng Zhang</a><sup>5</sup>,</span>
+            <span class="author-block">
+              <a href="http://staff.ustc.edu.cn/~tzzhang/" target="_blank">Tianzhu Zhang</a><sup>1,2</sup></span>
+          </div>
+
+          <!-- <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <sup>1</sup><a href="http://ustc.edu.cn/">University of Science and Technology of China</a>,</span>
+            <span class="author-block">
+              <sup>2</sup><a href="http://www.dsel.cc/">National Key Laboratoray of Deep Space Exploration, Deep Space Exploration Laboratory</a>,</span><br>
+            <span class="author-block">
+              <sup>3</sup><a href="https://www.tianyancha.com/company/11004921567">Jianghuai Advance Technology Center</a>,</span>
+            <span class="author-block">
+              <sup>4</sup><a href="https://www.dgut.edu.cn/">Dongguan University of Technology</a>,</span>
+            <span class="author-block">
+              <sup>5</sup><a href="https://www.sangfor.com.cn/">Sangfor Technologies</a>
+          </div> -->
+
+          <div class="is-size-5 publication-authors">
+            <!-- Institution Names -->
+            <span class="author-block">
+              <sup>1</sup>University of Science and Technology of China,</span>
+            <span class="author-block">
+              <sup>2</sup>National Key Laboratoray of Deep Space Exploration, Deep Space Exploration Laboratory,</span>
+            <span class="author-block">
+              <sup>3</sup>Jianghuai Advance Technology Center,</span>
+            <span class="author-block">
+              <sup>4</sup>Dongguan University of Technology,</span>
+            <span class="author-block">
+              <sup>5</sup>Sangfor Technologies</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+
+              <!-- Arxiv PDF link -->
+              <span class="link-block">
+                <!-- <a href="https://openreview.net/pdf?id=D4xztKoz0Y" target="_blank" -->
+                <a href="static/pdfs/SpherePose.pdf" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fas fa-file-pdf"></i>
+                </span>
+                <span>Paper</span>
+                </a>
+              </span>
+
+              <!-- ArXiv abstract Link -->
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="ai ai-arxiv"></i>
+                </span>
+                <span>arXiv</span>
+                </a>
+              </span> -->
+
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/<ARXIV PAPER ID>"
+                class="external-link button is-normal is-rounded is-dark"
+                style="background-color: #f0f0f0; color: #aaa; pointer-events: none; cursor: not-allowed;">
+                <span class="icon">
+                  <i class="ai ai-arxiv"></i>
+                </span>
+                <span>arXiv</span>
+                </a>
+              </span>
+
+              <!-- Github link -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/RenHuan1999/SpherePose" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+                </a>
+              </span> -->
+
+              <span class="link-block">
+                <a href="https://github.com/RenHuan1999/SpherePose"
+                class="external-link button is-normal is-rounded is-dark"
+                style="background-color: #f0f0f0; color: #aaa; pointer-events: none; cursor: not-allowed;">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+                </a>
+              </span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser image-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/SpherePose_motivation.png" alt="motivation" width="1000"/>
+      <h2 class="subtitle has-text-centered">
+        Our method employs <b>spherical representations</b> to learn shape-independent transformation, yielding smaller NOCS angle errors compared to DPDN, which adopts <b>point-based representations</b> and suffers from the shape-dependence.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser image -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Category-level object pose estimation aims to determine the pose and size of novel objects in specific categories.
+            Existing correspondence-based approaches typically adopt point-based representations to establish the correspondences between primitive observed points and normalized object coordinates.
+            However, due to the inherent shape-dependence of canonical coordinates, these methods suffer from semantic incoherence across diverse object shapes.
+            To resolve this issue, we innovatively leverage the sphere as a shared proxy shape of objects to learn shape-independent transformation via spherical representations.
+            Based on this insight, we introduce a novel architecture called SpherePose, which yields precise correspondence prediction through three core designs.
+            Firstly, We endow the point-wise feature extraction with SO(3)-invariance, which facilitates robust mapping between camera coordinate space and object coordinate space regardless of rotation transformation.
+            Secondly, the spherical attention mechanism is designed to propagate and integrate features among spherical anchors from a comprehensive perspective, thus mitigating the interference of noise and incomplete point cloud.
+            Lastly, a hyperbolic correspondence loss function is designed to distinguish subtle distinctions, which can promote the precision of correspondence prediction.
+            Experimental results on CAMERA25, REAL275 and HouseCat6D benchmarks demonstrate the superior performance of our method, verifying the effectiveness of spherical representations and architectural innovations.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Paper method -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="container">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <p>
+            The proposed SpherePose mainly consists of two components.
+            First, in the spherical representation projection phase, point-wise features are extracted and then assigned to spherical anchors with HEALPix spherical projection, yielding the spherical representations.
+            Subsequently, in the spherical rotation estimation phase, spherical anchors perform feature interaction with each other through the attention mechanism, and then they are mapped to the spherical NOCS coordinates for rotation estimation.
+          </p>
+        <div>
+        <img src="static/images/SpherePose_method.png" alt="method" width="1000"/>
+      </div>
+    </div>
+  </div>
+</section>
+<!--End paper method -->
+
+<!-- Paper experiment -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="container">
+        <h2 class="title is-3">Experiment</h2>
+        <img src="static/images/SpherePose_nocs.png" alt="exp_nocs" width="1000"/>
+        <img src="static/images/SpherePose_housecat.png" alt="exp_housecat" width="1000"/>
+        <img src="static/images/SpherePose_visualization.png" alt="exp_visual" width="1000"/>
+      </div>
+    </div>
+  </div>
+</section>
+<!--End paper experiment -->
+
+<!--BibTex citation -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+<pre><code>@inproceedings{iclr2025spherepose,
+    title={Learning Shape-Independent Transformation via Spherical Representations for Category-Level Object Pose Estimation},
+    author={Ren, Huan and Yang, Wenfei and Liu, Xiang and Zhang, Shifeng and Zhang, Tianzhu},
+    booktitle={The Thirteenth International Conference on Learning Representations},
+    year={2025}
+}</code></pre>
+  </div>
+</section>
+<!--End BibTex citation -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+</body>
+</html>
