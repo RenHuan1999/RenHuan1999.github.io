@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>SpherePose</title>
+  <title>SpotPose</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -52,10 +52,10 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-2 publication-title">Learning Shape-Independent Transformation via Spherical Representations for Category-Level Object Pose Estimation</h1>
+          <h1 class="title is-1 publication-title">Rethinking Correspondence-based Category-Level Object Pose Estimation</h1>
 
           <div class="is-size-4 publication-authors">
-            <span class="author-block">ICLR 2025</span>
+            <span class="author-block">CVPR 2025</span>
           </div>
           <hr>
 
@@ -66,9 +66,7 @@
             <span class="author-block">
               <a href="https://openreview.net/profile?id=~Wenfei_Yang2" target="_blank">Wenfei Yang</a><sup>1,2,3</sup>,</span>
             <span class="author-block">
-              <a href="https://openreview.net/profile?id=~Xiang_Liu8" target="_blank">Xiang Liu</a><sup>4</sup>,</span>
-            <span class="author-block">
-              <a href="http://www.cbsr.ia.ac.cn/users/sfzhang/" target="_blank">Shifeng Zhang</a><sup>5</sup>,</span>
+              <a href="http://www.cbsr.ia.ac.cn/users/sfzhang/" target="_blank">Shifeng Zhang</a><sup>4</sup>,</span>
             <span class="author-block">
               <a href="http://staff.ustc.edu.cn/~tzzhang/" target="_blank">Tianzhu Zhang</a><sup>1,2</sup></span>
           </div>
@@ -80,8 +78,6 @@
               <sup>2</sup><a href="http://www.dsel.cc/">National Key Laboratoray of Deep Space Exploration, Deep Space Exploration Laboratory</a>,</span><br>
             <span class="author-block">
               <sup>3</sup><a href="https://www.tianyancha.com/company/11004921567">Jianghuai Advance Technology Center</a>,</span>
-            <span class="author-block">
-              <sup>4</sup><a href="https://www.dgut.edu.cn/">Dongguan University of Technology</a>,</span>
             <span class="author-block">
               <sup>5</sup><a href="https://www.sangfor.com.cn/">Sangfor Technologies</a>
           </div> -->
@@ -95,9 +91,7 @@
             <span class="author-block">
               <sup>3</sup>Jianghuai Advance Technology Center,</span>
             <span class="author-block">
-              <sup>4</sup>Dongguan University of Technology,</span>
-            <span class="author-block">
-              <sup>5</sup>Sangfor Technologies</span>
+              <sup>4</sup>Sangfor Technologies</span>
           </div>
 
           <div class="column has-text-centered">
@@ -105,8 +99,7 @@
 
               <!-- Arxiv PDF link -->
               <span class="link-block">
-                <!-- <a href="https://openreview.net/pdf?id=D4xztKoz0Y" target="_blank" -->
-                <a href="static/pdfs/SpherePose.pdf" target="_blank"
+                <a href="static/pdfs/SpotPose.pdf" target="_blank"
                 class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
                   <i class="fas fa-file-pdf"></i>
@@ -116,9 +109,20 @@
               </span>
 
               <!-- ArXiv abstract Link -->
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2503.13926" target="_blank"
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="ai ai-arxiv"></i>
+                </span>
+                <span>arXiv</span>
+                </a>
+              </span> -->
+
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/<ARXIV PAPER ID>"
+                class="external-link button is-normal is-rounded is-dark"
+                style="background-color: #f0f0f0; color: #aaa; pointer-events: none; cursor: not-allowed;">
                 <span class="icon">
                   <i class="ai ai-arxiv"></i>
                 </span>
@@ -128,7 +132,7 @@
 
               <!-- Github link -->
               <span class="link-block">
-                <a href="https://github.com/RenHuan1999/SpherePose" target="_blank"
+                <a href="https://github.com/RenHuan1999/SpotPose" target="_blank"
                 class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
                   <i class="fab fa-github"></i>
@@ -138,7 +142,7 @@
               </span>
 
               <!-- <span class="link-block">
-                <a href="https://github.com/RenHuan1999/SpherePose"
+                <a href="https://github.com/RenHuan1999/SpotPose"
                 class="external-link button is-normal is-rounded is-dark"
                 style="background-color: #f0f0f0; color: #aaa; pointer-events: none; cursor: not-allowed;">
                 <span class="icon">
@@ -160,9 +164,15 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="static/images/SpherePose_motivation.png" alt="motivation" width="1000"/>
+      <!-- <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <source src="static/videos/banner_video.mp4"
+        type="video/mp4">
+      </video> -->
+      <img src="static/images/SpotPose_motivation.png" alt="motivation" width="1000"/>
       <h2 class="subtitle has-text-centered">
-        Our method employs <b>spherical representations</b> to learn shape-independent transformation, yielding smaller NOCS angle errors compared to DPDN, which adopts <b>point-based representations</b> and suffers from the shape-dependence.
+        Reconsideration of the two-stage correspondence-based paradigm.
+        (a) Essential of shape-sensitive and pose-invariant features during the correspondence prediction stage.
+        (b) Essential of outlier correspondence removal during the pose fitting stage.
       </h2>
     </div>
   </div>
@@ -177,15 +187,13 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Category-level object pose estimation aims to determine the pose and size of novel objects in specific categories.
-            Existing correspondence-based approaches typically adopt point-based representations to establish the correspondences between primitive observed points and normalized object coordinates.
-            However, due to the inherent shape-dependence of canonical coordinates, these methods suffer from semantic incoherence across diverse object shapes.
-            To resolve this issue, we innovatively leverage the sphere as a shared proxy shape of objects to learn shape-independent transformation via spherical representations.
-            Based on this insight, we introduce a novel architecture called SpherePose, which yields precise correspondence prediction through three core designs.
-            Firstly, We endow the point-wise feature extraction with SO(3)-invariance, which facilitates robust mapping between camera coordinate space and object coordinate space regardless of rotation transformation.
-            Secondly, the spherical attention mechanism is designed to propagate and integrate features among spherical anchors from a comprehensive perspective, thus mitigating the interference of noise and incomplete point cloud.
-            Lastly, a hyperbolic correspondence loss function is designed to distinguish subtle distinctions, which can promote the precision of correspondence prediction.
-            Experimental results on CAMERA25, REAL275 and HouseCat6D benchmarks demonstrate the superior performance of our method, verifying the effectiveness of spherical representations and architectural innovations.
+            Category-level object pose estimation aims to determine the pose and size of arbitrary objects within given categories.
+            Existing two-stage correspondence-based methods first establish correspondences between camera and object coordinates, and then acquire the object pose using a pose fitting algorithm.
+            In this paper, we conduct a comprehensive analysis of this paradigm and introduce two crucial essentials: 1) shape-sensitive and pose-invariant feature extraction for accurate correspondence prediction, and 2) outlier correspondence removal for robust pose fitting.
+            Based on these insights, we propose a simple yet effective correspondence-based method called SpotPose, which includes two stages.
+            During the correspondence prediction stage, pose-invariant geometric structure of objects is thoroughly exploited to facilitate shape-sensitive holistic interaction among keypoint-wise features.
+            During the pose fitting stage, outlier scores of correspondences are explicitly predicted to facilitate efficient identification and removal of outliers.
+            Experimental results on CAMERA25, REAL275 and HouseCat6D benchmarks demonstrate that the proposed SpotPose outperforms state-of-the-art approaches by a large margin.
           </p>
         </div>
       </div>
@@ -200,14 +208,7 @@
     <div class="columns is-centered has-text-centered">
       <div class="container">
         <h2 class="title is-3">Method</h2>
-        <div class="content has-text-justified">
-          <p>
-            The proposed SpherePose mainly consists of two components.
-            First, in the spherical representation projection phase, point-wise features are extracted and then assigned to spherical anchors with HEALPix spherical projection, yielding the spherical representations.
-            Subsequently, in the spherical rotation estimation phase, spherical anchors perform feature interaction with each other through the attention mechanism, and then they are mapped to the spherical NOCS coordinates for rotation estimation.
-          </p>
-        <div>
-        <img src="static/images/SpherePose_method.png" alt="method" width="1000"/>
+        <img src="static/images/SpotPose_method.png" alt="method" width="1000"/>
       </div>
     </div>
   </div>
@@ -220,9 +221,8 @@
     <div class="columns is-centered has-text-centered">
       <div class="container">
         <h2 class="title is-3">Experiment</h2>
-        <img src="static/images/SpherePose_nocs.png" alt="exp_nocs" width="1000"/>
-        <img src="static/images/SpherePose_housecat.png" alt="exp_housecat" width="1000"/>
-        <img src="static/images/SpherePose_visualization.png" alt="exp_visual" width="1000"/>
+        <img src="static/images/SpotPose_nocs.png" alt="exp_nocs" width="1000"/>
+        <img src="static/images/SpotPose_visualization.png" alt="exp_visual" width="700"/>
       </div>
     </div>
   </div>
@@ -233,10 +233,10 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-<pre><code>@inproceedings{iclr2025spherepose,
-    title={Learning Shape-Independent Transformation via Spherical Representations for Category-Level Object Pose Estimation},
-    author={Ren, Huan and Yang, Wenfei and Liu, Xiang and Zhang, Shifeng and Zhang, Tianzhu},
-    booktitle={The Thirteenth International Conference on Learning Representations},
+<pre><code>@inproceedings{cvpr2025spotpose,
+    title={Rethinking Correspondence-based Category-Level Object Pose Estimation},
+    author={Ren, Huan and Yang, Wenfei and Zhang, Shifeng and Zhang, Tianzhu},
+    booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
     year={2025}
 }</code></pre>
   </div>
