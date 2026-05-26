@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <meta name="description" content="ComPose: A Unified Completion-Pose Framework for Robust Category-Level Object Pose Estimation">
+  <meta property="og:title" content="ComPose: A Unified Completion-Pose Framework"/>
+  <meta property="og:description" content="ComPose seamlessly integrates point cloud completion into category-level object pose estimation, achieving state-of-the-art accuracy without category-level shape priors."/>
+  <meta property="og:url" content="https://renhuan1999.github.io/ComPose/"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/images/ComPose_method.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <meta name="twitter:title" content="ComPose: A Unified Completion-Pose Framework">
+  <meta name="twitter:description" content="ComPose seamlessly integrates point cloud completion into category-level object pose estimation.">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/ComPose_method.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="ComPose, Category-Level Object Pose Estimation, Point Cloud Completion, 6D Pose, CVPR 2026">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>ComPose</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico?v=3">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+
+  <!-- MathJax -->
+  <script>
+    MathJax = { tex: { inlineMath: [['$', '$']] } };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">ComPose: A Unified Completion-Pose Framework for Robust Category-Level Object Pose Estimation</h1>
+
+          <div class="is-size-4 publication-authors" style="display: inline-block; background: linear-gradient(135deg, #e0f2fe, #d1fae5); border: 2px solid #3b82f6; border-radius: 12px; padding: 12px 28px; margin-top: 10px; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);">
+            <span class="author-block" style="font-weight: 700; color: #1e40af;">CVPR 2026 Oral 🏆 Best Paper Award Candidate</span>
+          </div>
+          <hr>
+
+          <div class="is-size-5 publication-authors">
+            <!-- Paper authors -->
+            <span class="author-block">
+              <a href="https://github.com/RenHuan1999" target="_blank">Huan Ren</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://openreview.net/profile?id=~Yihan_Chen5" target="_blank">Yihan Chen</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://chuxwa.github.io/" target="_blank">Chuxin Wang</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://openreview.net/profile?id=~Nailong_Liu1" target="_blank">Nailong Liu</a><sup>3</sup>,</span>
+            <span class="author-block">
+              <a href="https://faculty.ustc.edu.cn/yangwenfei/zh_CN/index.htm" target="_blank">Wenfei Yang</a><sup>1,2*</sup>,</span>
+            <span class="author-block">
+              <a href="http://staff.ustc.edu.cn/~tzzhang/" target="_blank">Tianzhu Zhang</a><sup>1,2</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <!-- Institution Names -->
+            <span class="author-block">
+              <sup>1</sup>University of Science and Technology of China,</span>
+            <span class="author-block">
+              <sup>2</sup>National Key Laboratory of Deep Space Exploration, Deep Space Exploration Laboratory,</span>
+            <span class="author-block">
+              <sup>3</sup>Beijing Institute of Control Engineering</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+
+              <!-- Arxiv PDF link -->
+              <span class="link-block">
+                <a href="static/pdfs/ComPose_paper.pdf" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fas fa-file-pdf"></i>
+                </span>
+                <span>Paper</span>
+                </a>
+              </span>
+
+              <!-- ArXiv abstract Link -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2605.25553" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="ai ai-arxiv"></i>
+                </span>
+                <span>arXiv</span>
+                </a>
+              </span>
+
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/abs/<ARXIV PAPER ID>"
+                class="external-link button is-normal is-rounded is-dark"
+                style="background-color: #f0f0f0; color: #aaa; pointer-events: none; cursor: not-allowed;">
+                <span class="icon">
+                  <i class="ai ai-arxiv"></i>
+                </span>
+                <span>arXiv</span>
+                </a>
+              </span> -->
+
+              <!-- Github link -->
+              <span class="link-block">
+                <a href="https://github.com/RenHuan1999/ComPose" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+                </a>
+              </span>
+
+              <!-- <span class="link-block">
+                <a href="https://github.com/RenHuan1999/ComPose"
+                class="external-link button is-normal is-rounded is-dark"
+                style="background-color: #f0f0f0; color: #aaa; pointer-events: none; cursor: not-allowed;">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+                </a>
+              </span> -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser image-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <source src="static/videos/banner_video.mp4"
+        type="video/mp4">
+      </video> -->
+      <div class="has-text-centered">
+        <img src="static/images/ComPose_motivation_geometry.png" alt="motivation" width="700"/>
+      </div>
+      <div class="has-text-centered" style="max-width: 800px; margin: 0 auto;">
+        <p style="margin-bottom: 10px; font-size: 17px;">
+          Comparison of geometric representation strategies in category-level object pose estimation.
+        </p>
+        <p style="text-align: justify; display: inline-block; max-width: 700px; font-size: 18px;">
+          <strong>(a)</strong> Classic methods directly encode geometric features from partial point clouds, which limits their ability to capture complete object structures.<br>
+          <strong>(b)</strong> Prior-based approaches resort to category-level shape priors to enhance feature understanding of full object shapes, yet they still operate on incomplete geometries.<br>
+          <strong>(c)</strong> Our method explicitly integrates shape completion to recover complete geometries, facilitating more comprehensive and robust pose reasoning.
+        </p>
+      </div>
+      <div class="has-text-centered">
+        <img src="static/images/ComPose_motivation_accuracy_fps.png" alt="motivation" width="700"/>
+      </div>
+      <div class="has-text-centered" style="max-width: 800px; margin: 0 auto;">
+        <p style="margin-bottom: 10px; font-size: 18px;">
+          Our unified ComPose achieves best balance: <strong>High Accuracy & High Speed</strong>.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End teaser image -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p style="font-size: 18px;">
+            Category-level object pose estimation aims to predict the pose and size of arbitrary objects in specific categories. Existing methods struggle with the inherent incompleteness of observed point clouds, which limits their ability to capture complete object shapes for robust pose reasoning. While point cloud completion offers a promising solution, naively treating it as a separate preprocessing step for partial observations introduces compounding errors and additional computational overhead, ultimately hindering both accuracy and efficiency.
+            To address these challenges, we propose ComPose, a novel unified framework that tightly integrates shape completion to provide complete geometric cues for enhanced pose estimation. At the core of ComPose is a keypoint-based progressive completion module, which recovers full shape representations by progressively predicting a sparse set of keypoints and their surrounding dense point sets, empowering the keypoints to capture holistic object geometries. A geometric relation encoding module further enriches keypoint features with both local and global geometric context. In addition, we introduce a novel geometric relation consistency loss to enforce structural alignment between observed keypoints and their predicted NOCS coordinates, ensuring globally coherent coordinate transformations.
+            Extensive experiments on standard benchmarks demonstrate that our method outperforms state-of-the-art approaches without relying on category-level shape priors.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Paper method -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="container">
+        <h2 class="title is-3">Method</h2>
+        <img src="static/images/ComPose_method.png" alt="method" width="1000"/>
+        <div class="has-text-centered" style="max-width: 1000px; margin: 0 auto; margin-top: 17px;">
+          <p style="text-align: justify; display: inline-block; max-width: 950px; font-size: 17px;">
+            <strong>(a)</strong> Overview of the proposed ComPose framework, which supports both RGB-D and depth-only settings, where the latter omits the RGB images $I^{\mathrm{rgb}}$.<br>
+            <strong>(b)</strong> The initial coarse keypoints $C^{\mathrm{kpt}}$ are adaptively selected from missing and visible candidates $\{ C^{\mathrm{miss}}, C^{\mathrm{vis}} \}$. These coarse keypoints are then progressively refined through feature interactions with the partial features $F^{\mathrm{part}}$ to recover complete object geometries, including refined keypoints $P^{\mathrm{kpt}}$ and dense shapes $P^{\mathrm{com}}$.<br>
+            <strong>(c)</strong> The keypoint features $F^{\mathrm{kpt}}$ are enhanced into $F^{\mathrm{geo}}$ via geometric relation encoding, incorporating both local and global geometric context $\{ E^{\mathrm{l}}, E^{\mathrm{g}} \}$. To ensure robust coordinate transformations, the pairwise geometric relations $G$ among keypoints are constrained to maintain alignment between the observation and canonical spaces.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--End paper method -->
+
+<!-- Paper experiment -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="container">
+        <h2 class="title is-3">Experiment</h2>
+        <img src="static/images/ComPose_real275.png" alt="exp_real275" width="600"/>
+        <div class="has-text-centered" style="max-width: 900px; margin: 0 auto; margin-top: 10px;">
+          <p style="text-align: justify; display: inline-block; max-width: 800px; font-size: 18px;">
+            Comparison with state-of-the-art methods on the REAL275 dataset.
+            <br>
+            <strong>Under the depth-only setting</strong>, ComPose outperforms previous methods by a large margin across all 6D pose metrics, achieving improvements of 6.8% on $5^{\circ}\text{2cm}$ and 9.3% on $10^{\circ}\text{2cm}$ over the keypoint-based AG-Pose.
+            <br>
+            <strong>Under the RGB-D setting</strong>, ComPose further achieves the best results across all 6D pose metrics without relying on shape priors.
+          </p>
+        </div>
+        <img src="static/images/ComPose_visual_completion.png" alt="exp_visual_completion" width="600"/>
+        <div class="has-text-centered" style="max-width: 900px; margin: 0 auto; margin-top: 12px;">
+          <p style="text-align: justify; display: inline-block; max-width: 800px; font-size: 18px;">
+            Qualitative visualization of the keypoint-based progressive completion. ComPose recovers complete and accurate object geometries from partial observations across diverse categories.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--End paper experiment -->
+
+<!-- Real test videos -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-3 has-text-centered">REAL275 Testing Results</h2>
+      <p class="has-text-centered" style="font-size: 18px; margin-top: -10px; margin-bottom: 12px;">
+        <span style="color: red; font-weight: 600;">Red</span> / <span style="color: green; font-weight: 600;">Green</span> indicates the predicted / GT results.
+      </p>
+      <div class="columns" style="margin-top: 20px;">
+        <div class="column is-one-third has-text-centered">
+          <video controls muted loop preload="metadata" width="100%">
+            <source src="static/videos/real_test_scene_1.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">Scene 1</h2>
+        </div>
+        <div class="column is-one-third has-text-centered">
+          <video controls muted loop preload="metadata" width="100%">
+            <source src="static/videos/real_test_scene_2.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">Scene 2</h2>
+        </div>
+        <div class="column is-one-third has-text-centered">
+          <video controls muted loop preload="metadata" width="100%">
+            <source src="static/videos/real_test_scene_3.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">Scene 3</h2>
+        </div>
+      </div>
+      <div class="columns" style="margin-top: 20px;">
+        <div class="column is-one-third has-text-centered">
+          <video controls muted loop preload="metadata" width="100%">
+            <source src="static/videos/real_test_scene_4.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">Scene 4</h2>
+        </div>
+        <div class="column is-one-third has-text-centered">
+          <video controls muted loop preload="metadata" width="100%">
+            <source src="static/videos/real_test_scene_5.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">Scene 5</h2>
+        </div>
+        <div class="column is-one-third has-text-centered">
+          <video controls muted loop preload="metadata" width="100%">
+            <source src="static/videos/real_test_scene_6.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">Scene 6</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End real test videos -->
+
+<!--BibTex citation -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+<pre><code>@inproceedings{cvpr2026compose,
+    title={ComPose: A Unified Completion-Pose Framework for Robust Category-Level Object Pose Estimation},
+    author={Ren, Huan and Chen, Yihan and Wang, Chuxin and Liu, Nailong and Yang, Wenfei and Zhang, Tianzhu},
+    booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    year={2026}
+}</code></pre>
+  </div>
+</section>
+<!--End BibTex citation -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+</body>
+</html>
